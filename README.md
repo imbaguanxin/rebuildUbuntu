@@ -33,6 +33,11 @@ alias ga='git add'
 alias gs='git status'
 ```
 
+or
+```bash
+echo -e "# git \n alias gc='git commit -am' \n alias gps='git push' \n alias gpl='git pull' \n alias ga='git add' \n alias gs='git status'" >> ~/.bashrc
+```
+
 3. **set git configs**
 
 ```bash
