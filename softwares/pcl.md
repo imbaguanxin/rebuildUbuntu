@@ -41,10 +41,27 @@ cd pcl
 mkdir release
 cd release
 cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
-make -j4 (线程数根据情况选择)
+# 线程数根据情况选择
+make -j4
 sudo make  install
 ```
 
-3. use it with cmake
-follow http://pointclouds.org/documentation/tutorials/using_pcl_pcl_config.php#using-pcl-pcl-config
+3. pcl cmake tutorial: [guid from pcl official site](http://pointclouds.org/documentation/tutorials/using_pcl_pcl_config.php#using-pcl-pcl-config)
 
+Cmake file may look like:
+```
+add_executable(your_excutable main.cpp)
+
+find_package(PCL 1.8 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+target_link_libraries(your_excutable ${PCL_LIBRARIES})
+```
+
+reference:
+
+[pcl tutorials](http://pointclouds.org/documentation/tutorials/compiling_pcl_posix.php)
+
+[CSDN blog](https://www.cnblogs.com/lifeofershisui/p/9037829.html)
