@@ -9,5 +9,5 @@ sh Anaconda3-5.4.1-Linux-x86_64.sh
 
 To use Anaconda:
 ```bash
-souce ~/anaconda3/bin/activate
+source ~/anaconda3/bin/activate
 ```
