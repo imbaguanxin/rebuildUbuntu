@@ -11,3 +11,8 @@ To use Anaconda:
 ```bash
 source ~/anaconda3/bin/activate
 ```
+
+Stop anaconda from starting environment once open the Terminal:
+```bash
+conda config --set auto_activate_base false
+```
