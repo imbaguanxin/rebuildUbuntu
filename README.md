@@ -166,7 +166,7 @@ unpack the souce file to what you like
 sudo mkdir -p ~/ides/intellij
 cd ~/ides/intellij
 sudo tar -zxvf ~/Downloads/idea*.tar.gz
-sudo sh idea*/bin/idea.sh
+sh idea*/bin/idea.sh
 ```
 
 ## install R
