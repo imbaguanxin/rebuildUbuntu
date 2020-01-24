@@ -16,6 +16,11 @@ mac:
 source ~/opt/anaconda3/bin/activate
 ```
 
+Or just type:
+```bash
+conda activate [environment-name]
+```
+
 Stop anaconda from starting environment once open the Terminal:
 ```bash
 conda config --set auto_activate_base false
@@ -25,7 +30,8 @@ leave anaconda environment:
 ```bash
 conda deactivate
 ```
-mac:
+
+Create a new environment for conda
 ```bash
-source ~/opt/anaconda3/bin/deactivate
+conda create --name [new-environment-name]
 ```
