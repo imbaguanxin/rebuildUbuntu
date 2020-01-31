@@ -31,7 +31,25 @@ leave anaconda environment:
 conda deactivate
 ```
 
-Create a new environment for conda
-```bash
-conda create --name [new-environment-name]
-```
+## Commonly used commands
+
+* `conda create --name [new-env]`: create a new environment.
+* `conda env list` list environments.
+* `conda --version`: see version of conda
+* `conda install [lib-name]=[version]` install conda package. use strings like `'bar-lib>1.3.4,<1.1'` or `'bar-lib=1.0|1.4*'` to specify the version.
+* `conda update [lib-name]` update conda package.
+* `conda remove [lib-name]` remove package
+* `conda search [lib-name]` search info of given package. `conda search cytoolz=0.8.2 --info` to show information of specific package of specific version out on web.
+* `conda list` shows all packages installed. 
+  * `conda list 'numpy|pandas'` list packages you want to see.
+  * `conda list --name [env-name] 'numpy|pandas'`list packages on certain environment
+
+
+## advanced usages
+
+* `anaconda search [lib-name]` anaconda-client package help search all available packages with much information.
+* `conda install -c [organization] [lib]` install packages on channels other than the base channel.
+* `conda env remove -n [env-name]` remove specific environment.
+* `conda create --name [new-env-name] [libname]=[version] [libname]=[version] ...`
+* `conda env export -n [env-name] -f [file-name]` export environment to a file (.yml)
+* `conda env create -n [name] -f [filename]` create environment from file(.yml)
